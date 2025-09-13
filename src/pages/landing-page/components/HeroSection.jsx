@@ -20,7 +20,7 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand }, ref) => {
   const brandHeadline = "Get Content Delivered, Guaranteed";
 
   return (
-    <section ref={ref} className="relative min-h-auto md:min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden">
+    <section ref={ref} className="relative min-h-auto md:min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden pt-20 md:pt-0">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden hidden md:block">
         {/* Creator Avatars */}
