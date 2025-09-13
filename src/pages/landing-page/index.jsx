@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 
 // Import all components
+import Header from '../../components/Header';
 import HeroSection from './components/HeroSection';
 import ProblemStatement from './components/ProblemStatement';
 import SolutionJourney from './components/SolutionJourney';
@@ -39,16 +40,20 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>UGC Marketplace - Get Paid On Time, Content Delivered Guaranteed</title>
-        <meta name="description" content="The only UGC marketplace that guarantees on-time content delivery for brands while ensuring fair, prompt payment for creators through automated escrow and reputation systems." />
-        <meta name="keywords" content="UGC, user generated content, creator marketplace, brand collaboration, content creation, influencer marketing" />
-        <meta property="og:title" content="UGC Marketplace - Creator-Brand Platform" />
+        <title>UGCBox - Creator Marketplace | Get Paid On Time, Content Delivered Guaranteed</title>
+        <meta name="description" content="UGCBox is the only UGC marketplace that guarantees on-time content delivery for brands while ensuring fair, prompt payment for creators through automated escrow and reputation systems." />
+        <meta name="keywords" content="UGC, user generated content, creator marketplace, brand collaboration, content creation, influencer marketing, UGCBox" />
+        <meta property="og:title" content="UGCBox - Creator-Brand Platform" />
         <meta property="og:description" content="Join thousands of creators and brands building successful partnerships with guaranteed payments and on-time delivery." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="UGC Marketplace - Get Paid On Time" />
+        <meta name="twitter:title" content="UGCBox - Get Paid On Time" />
         <meta name="twitter:description" content="The only UGC marketplace with payment protection and delivery guarantees." />
       </Helmet>
+      
+      {/* Header */}
+      <Header />
+      
       {/* Hero Section */}
       <HeroSection 
         ref={heroSectionRef}
@@ -56,11 +61,17 @@ const LandingPage = () => {
         onJoinAsBrand={handleJoinAsBrand}
       />
       {/* Problem Statement */}
-      <ProblemStatement />
+      <div id="features">
+        <ProblemStatement />
+      </div>
       {/* Solution Journey */}
-      <SolutionJourney />
+      <div id="how-it-works">
+        <SolutionJourney />
+      </div>
       {/* Social Proof*/}
-      <SocialProofCarousel />
+      <div id="testimonials">
+        <SocialProofCarousel />
+      </div>
       {/* Features Grid */}
       <FeaturesGrid />
       {/* Success Metrics */}
@@ -70,7 +81,9 @@ const LandingPage = () => {
       {/* Trust Badges */}
       <TrustBadges />
       {/* FAQ Section */}
-      <FAQAccordion />
+      <div id="faq">
+        <FAQAccordion />
+      </div>
       {/* Footer */}
       <Footer />
       {/* Sticky Final CTA */}
@@ -80,11 +93,13 @@ const LandingPage = () => {
         onJoinAsBrand={handleJoinAsBrand}
       />
       {/* Waitlist Modal */}
-      <WaitlistForm 
-        isOpen={isWaitlistOpen}
-        onClose={closeWaitlist}
-        initialRole={selectedRole}
-      />
+      <div id="waitlist">
+        <WaitlistForm 
+          isOpen={isWaitlistOpen}
+          onClose={closeWaitlist}
+          initialRole={selectedRole}
+        />
+      </div>
       {/* Scroll to Top Button */}
       <motion.button
         className="fixed bottom-24 right-6 w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-40"
