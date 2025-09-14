@@ -68,7 +68,7 @@ const LandingPage = () => {
         onVisitorTypeChange={handleVisitorTypeChange}
       />
       {/* Problem Statement */}
-      <div id="features" className="mt-10">
+      <div id="features" className="mt-0">
         <ProblemStatement visitorType={visitorType} />
       </div>
       {/* Solution Journey */}

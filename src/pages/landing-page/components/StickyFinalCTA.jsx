@@ -47,7 +47,7 @@ const StickyFinalCTA = ({ heroSectionRef, onJoinAsCreator, onJoinAsBrand }) => {
 
         {/* Main CTA Content */}
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2.5">
             <div className="flex-1">
               <h3 className="text-lg font-bold text-gray-900 mb-1">
                 Ready to Join?
@@ -57,7 +57,7 @@ const StickyFinalCTA = ({ heroSectionRef, onJoinAsCreator, onJoinAsBrand }) => {
               </p>
             </div>
 
-            <div className="flex items-center space-x-3 ml-4">
+            <div className="flex items-center space-x-3 md:ml-4">
 
               {/* CTA Buttons */}
               <div className="flex space-x-2">

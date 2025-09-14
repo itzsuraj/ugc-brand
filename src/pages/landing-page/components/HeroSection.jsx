@@ -22,9 +22,9 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
   const brandSubtext = "The UGC marketplace where brands always get content on time—and creators always get paid on time.";
 
   return (
-    <section ref={ref} className="relative min-h-auto md:min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden pt-20 md:pt-0 pb-10">
+    <section ref={ref} className="relative min-h-auto md:min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden pt-10 md:pt-0 pb-1">
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-10 pb-8 md:pt-20 md:pb-16">
+      <div className="relative z-10 container mx-auto px-4 pt-10 pb-8 md:pt-20 md:pb-0">
         {/* Visitor Type Toggle - At the very top */}
         <motion.div
           className="flex justify-center mb-12"
