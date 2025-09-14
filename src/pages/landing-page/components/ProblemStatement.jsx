@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
 
-const ProblemStatement = () => {
-  const [activeTab, setActiveTab] = useState('creator');
+const ProblemStatement = ({ visitorType = 'creator' }) => {
+  const [activeTab, setActiveTab] = useState(visitorType);
+
+  useEffect(() => {
+    setActiveTab(visitorType);
+  }, [visitorType]);
 
   const creatorProblems = [
     {
@@ -56,7 +60,7 @@ const ProblemStatement = () => {
   const currentProblems = activeTab === 'creator' ? creatorProblems : brandProblems;
 
   return (
-    <section className="py-20 pt-3 bg-gray-50">
+    <section className="py-10 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2

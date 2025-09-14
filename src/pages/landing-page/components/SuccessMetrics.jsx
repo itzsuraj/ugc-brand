@@ -94,7 +94,7 @@ const SuccessMetrics = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section className="py-10 bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2
@@ -203,11 +203,6 @@ const SuccessMetrics = () => {
                 <p className="text-gray-600">Creators from 50+ countries</p>
               </div>
               
-              {/* Floating location indicators */}
-              <div className="absolute top-4 left-8 w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
-              <div className="absolute top-12 right-12 w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-              <div className="absolute bottom-8 left-16 w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <div className="absolute bottom-6 right-8 w-3 h-3 bg-pink-500 rounded-full animate-pulse"></div>
             </div>
 
             {/* Top Locations */}
@@ -277,15 +272,6 @@ const SuccessMetrics = () => {
               ))}
             </div>
 
-            {/* Live Counter */}
-            <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
-              <div className="flex items-center justify-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">
-                  Live: {Math.floor(Math.random() * 5) + 1} people viewing this page
-                </span>
-              </div>
-            </div>
           </motion.div>
         </div>
 

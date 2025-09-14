@@ -10,33 +10,20 @@ const Footer = () => {
       { name: 'How it Works', href: '#how-it-works' },
       { name: 'Features', href: '#features' },
       { name: 'Pricing', href: '#pricing' },
-      { name: 'Success Stories', href: '#testimonials' },
-      { name: 'Creator Tools', href: '#creator-tools' },
-      { name: 'Brand Dashboard', href: '#brand-dashboard' }
+      { name: 'Success Stories', href: '#testimonials' }
     ],
     company: [
       { name: 'About Us', href: '#about' },
-      { name: 'Careers', href: '#careers' },
-      { name: 'Press Kit', href: '#press' },
-      { name: 'Blog', href: '#blog' },
-      { name: 'Contact', href: '#contact' },
-      { name: 'Partners', href: '#partners' }
+      { name: 'Contact', href: '#contact' }
     ],
     resources: [
       { name: 'Help Center', href: '#help' },
       { name: 'Creator Guide', href: '#creator-guide' },
-      { name: 'Brand Guide', href: '#brand-guide' },
-      { name: 'Best Practices', href: '#best-practices' },
-      { name: 'API Documentation', href: '#api' },
-      { name: 'Webinars', href: '#webinars' }
+      { name: 'Brand Guide', href: '#brand-guide' }
     ],
     legal: [
       { name: 'Privacy Policy', href: '#privacy' },
-      { name: 'Terms of Service', href: '#terms' },
-      { name: 'Cookie Policy', href: '#cookies' },
-      { name: 'GDPR Compliance', href: '#gdpr' },
-      { name: 'Creator Agreement', href: '#creator-terms' },
-      { name: 'Brand Agreement', href: '#brand-terms' }
+      { name: 'Terms of Service', href: '#terms' }
     ]
   };
 
@@ -58,7 +45,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-10">
         <div className="grid lg:grid-cols-6 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
@@ -80,9 +67,7 @@ const Footer = () => {
               </div>
 
               <p className="text-gray-300 mb-6 leading-relaxed">
-                The only UGC marketplace that guarantees on-time content delivery for brands 
-                while ensuring fair, prompt payment for creators through automated escrow and 
-                reputation systems.
+                The only UGC marketplace that guarantees on-time content delivery for brands while ensuring fair, prompt payment for creators through automated escrow and reputation systems.
               </p>
 
               {/* Contact Info */}
@@ -248,7 +233,7 @@ const Footer = () => {
       </div>
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 py-4">
           <motion.div
             className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0"
             initial={{ opacity: 0 }}

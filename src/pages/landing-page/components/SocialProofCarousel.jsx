@@ -75,7 +75,7 @@ const SocialProofCarousel = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-10 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2
@@ -198,35 +198,6 @@ const SocialProofCarousel = () => {
           </div>
         </div>
 
-        {/* Brand Logos */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-gray-500 mb-6 sm:mb-8 font-medium px-2">Trusted by leading brands worldwide</p>
-          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 opacity-60">
-            {brandLogos?.map((brand, index) => (
-              <motion.div
-                key={brand?.name}
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <Image
-                  src={brand?.logo}
-                  alt={brand?.name}
-                  className="h-10 sm:h-12 w-auto"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

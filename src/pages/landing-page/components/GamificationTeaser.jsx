@@ -130,7 +130,7 @@ const GamificationTeaser = () => {
   );
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-pink-50 relative overflow-hidden">
+    <section className="py-10 bg-gradient-to-br from-purple-50 via-white to-pink-50 relative overflow-hidden">
       {/* Confetti Animation */}
       <AnimatePresence>
         {showConfetti && (

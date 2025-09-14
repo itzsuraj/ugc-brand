@@ -20,6 +20,7 @@ import Footer from './components/Footer';
 const LandingPage = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   const [selectedRole, setSelectedRole] = useState(null);
+  const [visitorType, setVisitorType] = useState('creator');
   const heroSectionRef = useRef(null);
 
   const handleJoinAsCreator = () => {
@@ -30,6 +31,10 @@ const LandingPage = () => {
   const handleJoinAsBrand = () => {
     setSelectedRole('brand');
     setIsWaitlistOpen(true);
+  };
+
+  const handleVisitorTypeChange = (type) => {
+    setVisitorType(type);
   };
 
   const closeWaitlist = () => {
@@ -59,33 +64,45 @@ const LandingPage = () => {
         ref={heroSectionRef}
         onJoinAsCreator={handleJoinAsCreator}
         onJoinAsBrand={handleJoinAsBrand}
+        visitorType={visitorType}
+        onVisitorTypeChange={handleVisitorTypeChange}
       />
       {/* Problem Statement */}
-      <div id="features">
-        <ProblemStatement />
+      <div id="features" className="mt-10">
+        <ProblemStatement visitorType={visitorType} />
       </div>
       {/* Solution Journey */}
-      <div id="how-it-works">
+      <div id="how-it-works" className="mt-10">
         <SolutionJourney />
       </div>
       {/* Social Proof*/}
-      <div id="testimonials">
+      <div id="testimonials" className="mt-10">
         <SocialProofCarousel />
       </div>
       {/* Features Grid */}
-      <FeaturesGrid />
+      <div className="mt-10">
+        <FeaturesGrid />
+      </div>
       {/* Success Metrics */}
-      <SuccessMetrics />
+      <div className="mt-10">
+        <SuccessMetrics />
+      </div>
       {/* Gamification Teaser */}
-      <GamificationTeaser />
+      <div className="mt-10">
+        <GamificationTeaser />
+      </div>
       {/* Trust Badges */}
-      <TrustBadges />
+      <div className="mt-10">
+        <TrustBadges />
+      </div>
       {/* FAQ Section */}
-      <div id="faq">
+      <div id="faq" className="mt-10">
         <FAQAccordion />
       </div>
       {/* Footer */}
-      <Footer />
+      <div className="mt-10">
+        <Footer />
+      </div>
       {/* Sticky Final CTA */}
       <StickyFinalCTA 
         heroSectionRef={heroSectionRef}

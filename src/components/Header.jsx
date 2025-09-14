@@ -59,20 +59,6 @@ const Header = () => {
             </div>
           </motion.div>
 
-          {/* Mobile Creator Counter - Centered */}
-          <div className="md:hidden flex items-center">
-            <motion.div 
-              className="flex items-center space-x-2 bg-gradient-to-r from-green-50 to-blue-50 px-3 py-2 rounded-full border border-green-200"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-xs font-medium text-gray-700">
-                {creatorCount?.toLocaleString()}
-              </span>
-            </motion.div>
-          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -102,20 +88,7 @@ const Header = () => {
             </button>
           </nav>
 
-          {/* Creator Counter */}
-          <div className="hidden md:flex items-center">
-            <motion.div 
-              className="flex items-center space-x-2 bg-gradient-to-r from-green-50 to-blue-50 px-4 py-2 rounded-full border border-green-200"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-gray-700">
-                {creatorCount?.toLocaleString()} creators joined
-              </span>
-            </motion.div>
-          </div>
+
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">

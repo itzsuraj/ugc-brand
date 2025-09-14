@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Button from '../../../components/ui/Button';
 import Icon from '../../../components/AppIcon';
 
-const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, onVisitorTypeChange }, ref) => {
+const CreatorHeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand }, ref) => {
   const [currentCount, setCurrentCount] = useState(2847);
 
   useEffect(() => {
@@ -15,11 +15,8 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
     return () => clearInterval(interval);
   }, []);
 
-  const creatorHeadline = "Get Paid On Time, Every Time";
-  const brandHeadline = "Get Content Delivered, Guaranteed";
-  
-  const creatorSubtext = "The UGC marketplace where creators always get paid on time—and brands always get content on time.";
-  const brandSubtext = "The UGC marketplace where brands always get content on time—and creators always get paid on time.";
+  const headline = "Get Paid On Time, Every Time";
+  const subheadline = "The UGC marketplace where creators always get paid on time—and brands always get content on time.";
 
   return (
     <section ref={ref} className="relative min-h-auto md:min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden pt-20 md:pt-0 pb-10">
@@ -34,28 +31,13 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
         >
           <div className="bg-white rounded-full p-1 shadow-lg border">
             <button
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                visitorType === 'creator' 
-                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md' 
-                  : 'text-gray-600 hover:text-gray-800'
-              }`}
-              onClick={() => {
-                onVisitorTypeChange && onVisitorTypeChange('creator');
-                onJoinAsCreator && onJoinAsCreator();
-              }}
+              className="px-6 py-3 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md"
             >
               I'm a Creator
             </button>
             <button
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                visitorType === 'brand' 
-                  ? 'bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-md' 
-                  : 'text-gray-600 hover:text-gray-800'
-              }`}
-              onClick={() => {
-                onVisitorTypeChange && onVisitorTypeChange('brand');
-                onJoinAsBrand && onJoinAsBrand();
-              }}
+              className="px-6 py-3 rounded-full text-sm font-medium text-gray-600 hover:text-gray-800"
+              onClick={() => onJoinAsBrand && onJoinAsBrand()}
             >
               I'm a Brand
             </button>
@@ -63,8 +45,7 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
         </motion.div>
 
         <div className="text-center max-w-6xl mx-auto">
-
-          {/* Dynamic Headlines */}
+          {/* Headlines */}
           <motion.div
             className="mb-8"
             initial={{ opacity: 0, y: 30 }}
@@ -73,12 +54,12 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
           >
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                {visitorType === 'creator' ? creatorHeadline : brandHeadline}
+                {headline}
               </span>
             </h1>
             
             <p className="text-base sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              {visitorType === 'creator' ? creatorSubtext : brandSubtext}
+              {subheadline}
             </p>
           </motion.div>
 
@@ -112,13 +93,12 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
             </Button>
           </motion.div>
 
-
         </div>
       </div>
     </section>
   );
 });
 
-HeroSection.displayName = 'HeroSection';
+CreatorHeroSection.displayName = 'CreatorHeroSection';
 
-export default HeroSection;
+export default CreatorHeroSection;
