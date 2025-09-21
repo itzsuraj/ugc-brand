@@ -15,16 +15,16 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
     return () => clearInterval(interval);
   }, []);
 
-  const creatorHeadline = "Get Paid On Time, Every Time";
-  const brandHeadline = "Get Content Delivered, Guaranteed";
+  const creatorHeadline = "Get Paid to Create. Build Your Dream Brand Collabs.";
+  const brandHeadline = "Find the Creators Who Make Your Brand Unstoppable";
   
-  const creatorSubtext = "The UGC marketplace where creators always get paid on time—and brands always get content on time.";
-  const brandSubtext = "The UGC marketplace where brands always get content on time—and creators always get paid on time.";
+  const creatorSubtext = "Turn your creativity into income. UGCBox helps you land paid gigs, build your portfolio, and work with brands that align with your style.";
+  const brandSubtext = "From authentic TikToks to scroll-stopping Reels – UGCBox connects you with vetted creators who know how to drive sales, not just likes.";
 
   return (
     <section ref={ref} className="relative min-h-auto md:min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden pt-10 md:pt-0 pb-1">
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-10 pb-8 md:pt-20 md:pb-0">
+      <div className="relative z-10 container mx-auto px-4 pt-10 pb-8 md:pt-20 md:pb-">
         {/* Visitor Type Toggle - At the very top */}
         <motion.div
           className="flex justify-center mb-12"
@@ -97,7 +97,7 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
               iconName="Users"
               iconPosition="left"
             >
-              Join as Creator
+              Join as a Creator →
             </Button>
             
             <Button
@@ -108,7 +108,7 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
               iconName="Building2"
               iconPosition="left"
             >
-              Join as Brand
+              Start Hiring Creators →
             </Button>
           </motion.div>
 

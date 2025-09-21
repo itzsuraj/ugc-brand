@@ -2,53 +2,142 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
 
-const SolutionJourney = () => {
+const SolutionJourney = ({ visitorType = 'creator' }) => {
   const [activeStep, setActiveStep] = useState(0);
 
-  const steps = [
+  const creatorSteps = [
     {
       id: 1,
-      title: 'Creators Set Up Profile',
-      description: 'Upload portfolio, set rates, and showcase your best work',
+      title: 'Create Your Profile',
+      description: 'Show off your skills, content style, and rates',
       icon: 'User',
       color: 'purple',
       details: [
-        'Portfolio verification system',
-        'Transparent rate setting',
-        'Skill-based matching',
-        'Quality score tracking'
+        'Upload your best work samples',
+        'Set your rates and availability',
+        'Define your content style',
+        'Add your social media links'
       ],
-      tooltip: 'Our AI analyzes your portfolio to match you with relevant brands'
+      tooltip: 'Build a compelling profile that attracts the right brands'
     },
     {
       id: 2,
-      title: 'Brands Browse & Select',
-      description: 'Find creators instantly with smart filters and brief templates',
+      title: 'Apply for Brand Briefs',
+      description: 'Browse open opportunities and submit your ideas',
       icon: 'Search',
       color: 'blue',
       details: [
-        'Advanced creator filtering',
-        'Pre-built brief templates',
-        'Budget estimation tools',
-        'Timeline planning'
+        'Browse available projects',
+        'Submit creative proposals',
+        'Showcase your unique approach',
+        'Get matched with relevant brands'
       ],
-      tooltip: 'Smart matching ensures you find creators who understand your brand'
+      tooltip: 'Find projects that match your skills and interests'
     },
     {
       id: 3,
-      title: 'Automated Protection',
-      description: 'Escrow holds payment, content delivered, everyone gets paid',
-      icon: 'Shield',
+      title: 'Create & Deliver Content',
+      description: 'Produce content, submit for approval, and make revisions if needed',
+      icon: 'Camera',
       color: 'green',
       details: [
-        'Secure escrow system',
-        'Milestone-based payments',
-        'Quality assurance checks',
-        'Dispute resolution'
+        'Create high-quality content',
+        'Submit for brand review',
+        'Make requested revisions',
+        'Deliver final approved content'
       ],
-      tooltip: 'Payment is guaranteed once content meets agreed specifications'
+      tooltip: 'Focus on creating while we handle the logistics'
+    },
+    {
+      id: 4,
+      title: 'Get Paid Automatically',
+      description: 'Once approved, your payment is released instantly',
+      icon: 'DollarSign',
+      color: 'orange',
+      details: [
+        'Instant payment upon approval',
+        'No chasing invoices',
+        'Secure escrow protection',
+        'Track all payments in one place'
+      ],
+      tooltip: 'Get paid on time, every time'
     }
   ];
+
+  const brandSteps = [
+    {
+      id: 1,
+      title: 'Post Your Brief',
+      description: 'Tell us what you need — platform, style, budget, and goals',
+      icon: 'FileText',
+      color: 'purple',
+      details: [
+        'Define your content requirements',
+        'Set your budget and timeline',
+        'Choose target platforms',
+        'Specify your brand guidelines'
+      ],
+      tooltip: 'Create a clear brief to attract the right creators'
+    },
+    {
+      id: 2,
+      title: 'Match with Creators',
+      description: 'Our platform pairs you with vetted creators who are a perfect fit for your brand',
+      icon: 'Users',
+      color: 'blue',
+      details: [
+        'AI-powered creator matching',
+        'Review creator portfolios',
+        'Check ratings and reviews',
+        'Select your preferred creators'
+      ],
+      tooltip: 'Find creators who understand your brand and audience'
+    },
+    {
+      id: 3,
+      title: 'Complete the Escrow Payment',
+      description: 'Pay Floovio to get the gears of content rolling',
+      icon: 'CreditCard',
+      color: 'green',
+      details: [
+        'Secure payment processing',
+        'Funds held in escrow',
+        'Payment protection for both parties',
+        'Transparent fee structure'
+      ],
+      tooltip: 'Your payment is safe until you approve the content'
+    },
+    {
+      id: 4,
+      title: 'Review & Approve Content',
+      description: 'Get drafts, request edits, and approve content before it goes live',
+      icon: 'Eye',
+      color: 'orange',
+      details: [
+        'Review content drafts',
+        'Request specific revisions',
+        'Approve final content',
+        'Download high-quality files'
+      ],
+      tooltip: 'Full control over your content before it goes live'
+    },
+    {
+      id: 5,
+      title: 'Pay When You\'re Happy',
+      description: 'Funds are released to creators only after final approval, keeping your campaigns risk-free',
+      icon: 'Shield',
+      color: 'red',
+      details: [
+        'Payment only after approval',
+        'Risk-free for brands',
+        'Automatic payment release',
+        'Satisfaction guaranteed'
+      ],
+      tooltip: 'Only pay for content you love'
+    }
+  ];
+
+  const steps = visitorType === 'creator' ? creatorSteps : brandSteps;
 
   return (
     <section className="py-10 bg-white">
@@ -70,7 +159,10 @@ const SolutionJourney = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            A simple 3-step process that protects both creators and brands
+            {visitorType === 'creator' 
+              ? 'A simple 4-step process to turn your creativity into income'
+              : 'A simple 5-step process that protects both creators and brands'
+            }
           </motion.p>
         </div>
 
@@ -105,7 +197,10 @@ const SolutionJourney = () => {
                     {/* Step Circle */}
                     <div className={`relative w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg transition-all duration-300 ${
                       step?.color === 'purple' ? 'bg-gradient-to-r from-purple-500 to-purple-600' :
-                      step?.color === 'blue'? 'bg-gradient-to-r from-blue-500 to-blue-600' : 'bg-gradient-to-r from-green-500 to-green-600'
+                      step?.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-blue-600' : 
+                      step?.color === 'green' ? 'bg-gradient-to-r from-green-500 to-green-600' :
+                      step?.color === 'orange' ? 'bg-gradient-to-r from-orange-500 to-orange-600' :
+                      'bg-gradient-to-r from-red-500 to-red-600'
                     } ${activeStep === index ? 'scale-110 shadow-xl' : 'hover:scale-105'}`}>
                       <Icon name={step?.icon} size={28} className="text-white" />
                       
@@ -142,7 +237,10 @@ const SolutionJourney = () => {
               >
                 <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-lg ${
                   step?.color === 'purple' ? 'bg-gradient-to-r from-purple-500 to-purple-600' :
-                  step?.color === 'blue'? 'bg-gradient-to-r from-blue-500 to-blue-600' : 'bg-gradient-to-r from-green-500 to-green-600'
+                  step?.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-blue-600' : 
+                  step?.color === 'green' ? 'bg-gradient-to-r from-green-500 to-green-600' :
+                  step?.color === 'orange' ? 'bg-gradient-to-r from-orange-500 to-orange-600' :
+                  'bg-gradient-to-r from-red-500 to-red-600'
                 }`}>
                   <Icon name={step?.icon} size={22} className="text-white" />
                 </div>

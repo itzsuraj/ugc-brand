@@ -12,22 +12,22 @@ const ProblemStatement = ({ visitorType = 'creator' }) => {
   const creatorProblems = [
     {
       icon: 'DollarSign',
-      title: 'Payment Delays',
-      description: 'Waiting 30-90 days for payment after delivering content',
+      title: 'Payment Delays & Ghosting',
+      description: 'You pour your heart into creating content… and then wait 30–90 days to get paid. Sometimes, the brand vanishes altogether, leaving you chasing invoices instead of focusing on your craft.',
       emoji: '😤',
       stat: '73% of creators experience this'
     },
     {
       icon: 'MessageSquare',
-      title: 'Unclear Briefs',
-      description: 'Vague requirements leading to endless revisions',
+      title: 'Unclear Briefs & Endless Revisions',
+      description: '"Can you just tweak this one thing?" becomes 10 rounds of edits because the brief was never clear to begin with. Hours of extra work for the same pay.',
       emoji: '😵‍💫',
       stat: 'Average 4.2 revisions per project'
     },
     {
       icon: 'UserX',
       title: 'Brand Ghosting',
-      description: 'Brands disappearing after content delivery',
+      description: 'Brands disappearing after content delivery, leaving you with unpaid work and wasted time.',
       emoji: '👻',
       stat: '41% report communication issues'
     }
@@ -37,21 +37,21 @@ const ProblemStatement = ({ visitorType = 'creator' }) => {
     {
       icon: 'Clock',
       title: 'Missed Deadlines',
-      description: 'Creators delivering content late or not at all',
+      description: '68% of campaigns get delayed because creators deliver late or not at all — costing you launches, trends, and revenue.',
       emoji: '⏰',
       stat: '68% of campaigns delayed'
     },
     {
       icon: 'AlertTriangle',
-      title: 'Quality Issues',
-      description: 'Content not meeting brand standards or guidelines',
+      title: 'Inconsistent Quality',
+      description: '52% of submissions need major revisions, wasting time and stretching your team\'s bandwidth.',
       emoji: '😬',
       stat: '52% require major revisions'
     },
     {
       icon: 'MessageCircleX',
-      title: 'Communication Gaps',
-      description: 'Difficulty reaching creators during projects',
+      title: 'Endless Creator Hunt',
+      description: 'DMs, spreadsheets, and cold outreach take hours — and half the creators don\'t reply.',
       emoji: '📵',
       stat: 'Average 2-day response time'
     }
@@ -70,7 +70,7 @@ const ProblemStatement = ({ visitorType = 'creator' }) => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            The Problem is <span className="text-red-500">Real</span>
+            The Problem is <span className="bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">Real</span>
           </motion.h2>
           <motion.p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -98,7 +98,7 @@ const ProblemStatement = ({ visitorType = 'creator' }) => {
               }`}
               onClick={() => setActiveTab('creator')}
             >
-              Creator Pain Points
+              Creators
             </button>
             <button
               className={`px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 ${
@@ -106,7 +106,7 @@ const ProblemStatement = ({ visitorType = 'creator' }) => {
               }`}
               onClick={() => setActiveTab('brand')}
             >
-              Brand Struggles
+              Brands
             </button>
           </div>
         </motion.div>

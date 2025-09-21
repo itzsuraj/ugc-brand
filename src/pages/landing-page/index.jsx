@@ -6,7 +6,9 @@ import { Helmet } from 'react-helmet';
 import Header from '../../components/Header';
 import HeroSection from './components/HeroSection';
 import ProblemStatement from './components/ProblemStatement';
+import KeyBenefits from './components/KeyBenefits';
 import SolutionJourney from './components/SolutionJourney';
+import WhyChooseUGCBox from './components/WhyChooseUGCBox';
 import SocialProofCarousel from './components/SocialProofCarousel';
 import FeaturesGrid from './components/FeaturesGrid';
 import GamificationTeaser from './components/GamificationTeaser';
@@ -71,9 +73,17 @@ const LandingPage = () => {
       <div id="features" className="mt-0">
         <ProblemStatement visitorType={visitorType} />
       </div>
+      {/* Key Benefits */}
+      <div className="mt-10">
+        <KeyBenefits visitorType={visitorType} />
+      </div>
       {/* Solution Journey */}
       <div id="how-it-works" className="mt-10">
-        <SolutionJourney />
+        <SolutionJourney visitorType={visitorType} />
+      </div>
+      {/* Why Choose UGCBox */}
+      <div className="mt-10">
+        <WhyChooseUGCBox visitorType={visitorType} />
       </div>
       {/* Social Proof*/}
       <div id="testimonials" className="mt-10">
