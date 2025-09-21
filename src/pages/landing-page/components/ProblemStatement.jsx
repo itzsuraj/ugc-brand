@@ -12,8 +12,8 @@ const ProblemStatement = ({ visitorType = 'creator' }) => {
   const creatorProblems = [
     {
       icon: 'DollarSign',
-      title: 'Payment Delays & Ghosting',
-      description: 'You pour your heart into creating content… and then wait 30–90 days to get paid. Sometimes, the brand vanishes altogether, leaving you chasing invoices instead of focusing on your craft.',
+      title: 'Payment Delays',
+      description: 'You pour your heart into creating content… and then wait 30–90 days to get paid.',
       emoji: '😤',
       stat: '73% of creators experience this'
     },
@@ -27,7 +27,7 @@ const ProblemStatement = ({ visitorType = 'creator' }) => {
     {
       icon: 'UserX',
       title: 'Brand Ghosting',
-      description: 'Brands disappearing after content delivery, leaving you with unpaid work and wasted time.',
+      description: 'Sometimes, the brand vanishes altogether, leaving you chasing invoices instead of focusing on your craft.',
       emoji: '👻',
       stat: '41% report communication issues'
     }

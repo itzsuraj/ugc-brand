@@ -96,7 +96,7 @@ const SolutionJourney = ({ visitorType = 'creator' }) => {
     {
       id: 3,
       title: 'Complete the Escrow Payment',
-      description: 'Pay Floovio to get the gears of content rolling',
+      description: 'Pay Floovio to get the gears of virality rolling',
       icon: 'CreditCard',
       color: 'green',
       details: [
