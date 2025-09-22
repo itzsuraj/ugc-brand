@@ -1,13 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
 
-const ProblemStatement = ({ visitorType = 'creator' }) => {
-  const [activeTab, setActiveTab] = useState(visitorType);
-
-  useEffect(() => {
-    setActiveTab(visitorType);
-  }, [visitorType]);
+const ProblemStatement = () => {
 
   const creatorProblems = [
     {
@@ -57,7 +52,6 @@ const ProblemStatement = ({ visitorType = 'creator' }) => {
     }
   ];
 
-  const currentProblems = activeTab === 'creator' ? creatorProblems : brandProblems;
 
   return (
     <section className="py-10 bg-gray-50">
@@ -83,74 +77,94 @@ const ProblemStatement = ({ visitorType = 'creator' }) => {
           </motion.p>
         </div>
 
-        {/* Tab Selector */}
-        <motion.div
-          className="flex justify-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-white rounded-full p-2 shadow-lg border">
-            <button
-              className={`px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 ${
-                activeTab === 'creator' ?'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md' :'text-gray-600 hover:text-gray-800'
-              }`}
-              onClick={() => setActiveTab('creator')}
-            >
-              Creators
-            </button>
-            <button
-              className={`px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 ${
-                activeTab === 'brand' ?'bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-md' :'text-gray-600 hover:text-gray-800'
-              }`}
-              onClick={() => setActiveTab('brand')}
-            >
-              Brands
-            </button>
-          </div>
-        </motion.div>
 
         {/* Problems Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {currentProblems?.map((problem, index) => (
-            <motion.div
-              key={`${activeTab}-${index}`}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border"
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="text-center mb-6">
-                <div className="text-4xl mb-2">{problem?.emoji}</div>
-                <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${
-                  activeTab === 'creator' ?'bg-gradient-to-r from-purple-100 to-pink-100' :'bg-gradient-to-r from-blue-100 to-blue-200'
-                }`}>
-                  <Icon 
-                    name={problem?.icon} 
-                    size={24} 
-                    className={activeTab === 'creator' ? 'text-purple-600' : 'text-blue-600'} 
-                  />
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                {problem?.title}
-              </h3>
-              
-              <p className="text-gray-600 mb-4 text-center leading-relaxed">
-                {problem?.description}
-              </p>
-              
-              <div className={`text-center p-3 rounded-lg ${
-                activeTab === 'creator' ?'bg-purple-50 text-purple-700' :'bg-blue-50 text-blue-700'
-              }`}>
-                <span className="text-sm font-semibold">{problem?.stat}</span>
-              </div>
-            </motion.div>
-          ))}
+        <div className="max-w-7xl mx-auto">
+          {/* Creator Problems */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
+              Creator <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Pain Points</span>
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              {creatorProblems?.map((problem, index) => (
+                <motion.div
+                  key={`creator-${index}`}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border"
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="text-center mb-6">
+                    <div className="text-4xl mb-2">{problem?.emoji}</div>
+                    <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 bg-gradient-to-r from-purple-100 to-pink-100">
+                      <Icon 
+                        name={problem?.icon} 
+                        size={24} 
+                        className="text-purple-600" 
+                      />
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                    {problem?.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 text-center leading-relaxed">
+                    {problem?.description}
+                  </p>
+                  
+                  <div className="text-center p-3 rounded-lg bg-purple-50 text-purple-700">
+                    <span className="text-sm font-semibold">{problem?.stat}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Brand Problems */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
+              Brand <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Struggles</span>
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              {brandProblems?.map((problem, index) => (
+                <motion.div
+                  key={`brand-${index}`}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border"
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="text-center mb-6">
+                    <div className="text-4xl mb-2">{problem?.emoji}</div>
+                    <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 bg-gradient-to-r from-blue-100 to-blue-200">
+                      <Icon 
+                        name={problem?.icon} 
+                        size={24} 
+                        className="text-blue-600" 
+                      />
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                    {problem?.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 text-center leading-relaxed">
+                    {problem?.description}
+                  </p>
+                  
+                  <div className="text-center p-3 rounded-lg bg-blue-50 text-blue-700">
+                    <span className="text-sm font-semibold">{problem?.stat}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Call to Action */}

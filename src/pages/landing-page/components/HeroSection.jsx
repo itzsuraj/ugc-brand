@@ -39,10 +39,7 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
                   ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md' 
                   : 'text-gray-600 hover:text-gray-800'
               }`}
-              onClick={() => {
-                onVisitorTypeChange && onVisitorTypeChange('creator');
-                onJoinAsCreator && onJoinAsCreator();
-              }}
+              onClick={() => onVisitorTypeChange && onVisitorTypeChange('creator')}
             >
               I'm a Creator
             </button>
@@ -52,10 +49,7 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
                   ? 'bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-md' 
                   : 'text-gray-600 hover:text-gray-800'
               }`}
-              onClick={() => {
-                onVisitorTypeChange && onVisitorTypeChange('brand');
-                onJoinAsBrand && onJoinAsBrand();
-              }}
+              onClick={() => onVisitorTypeChange && onVisitorTypeChange('brand')}
             >
               I'm a Brand
             </button>
@@ -82,34 +76,36 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
             </p>
           </motion.div>
 
-          {/* Dual CTAs */}
+          {/* Dynamic CTA */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 md:mb-12"
+            className="flex justify-center items-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <Button
-              variant="default"
-              size="xl"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-              onClick={onJoinAsCreator}
-              iconName="Users"
-              iconPosition="left"
-            >
-              Join as a Creator →
-            </Button>
-            
-            <Button
-              variant="outline"
-              size="xl"
-              className="bg-gradient-to-r from-blue-600 to-blue-800 text-white border-blue-600 hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-900 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-              onClick={onJoinAsBrand}
-              iconName="Building2"
-              iconPosition="left"
-            >
-              Start Hiring Creators →
-            </Button>
+            {visitorType === 'creator' ? (
+              <Button
+                variant="default"
+                size="xl"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                onClick={onJoinAsCreator}
+                iconName="Users"
+                iconPosition="left"
+              >
+                Join as a Creator →
+              </Button>
+            ) : (
+              <Button
+                variant="default"
+                size="xl"
+                className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                onClick={onJoinAsBrand}
+                iconName="Building2"
+                iconPosition="left"
+              >
+                Start Hiring Creators →
+              </Button>
+            )}
           </motion.div>
 
 

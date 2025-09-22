@@ -60,33 +60,33 @@ const Header = () => {
           </motion.div>
 
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('features')}
-              className="text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium"
-            >
-              Features
-            </button>
-            <button 
-              onClick={() => scrollToSection('how-it-works')}
-              className="text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium"
-            >
-              How It Works
-            </button>
-            <button 
-              onClick={() => scrollToSection('testimonials')}
-              className="text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium"
-            >
-              Testimonials
-            </button>
-            <button 
-              onClick={() => scrollToSection('faq')}
-              className="text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium"
-            >
-              FAQ
-            </button>
-          </nav>
+              {/* Desktop Navigation */}
+              <nav className="hidden md:flex items-center space-x-8">
+                <button 
+                  onClick={() => scrollToSection('features')}
+                  className="text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium"
+                >
+                  Features
+                </button>
+                <button 
+                  onClick={() => scrollToSection('how-it-works')}
+                  className="text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium"
+                >
+                  How It Works
+                </button>
+                <button 
+                  onClick={() => scrollToSection('testimonials')}
+                  className="text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium"
+                >
+                  Testimonials
+                </button>
+                <button 
+                  onClick={() => scrollToSection('faq')}
+                  className="text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium"
+                >
+                  FAQ
+                </button>
+              </nav>
 
 
 
@@ -131,16 +131,12 @@ const Header = () => {
             >
               Testimonials
             </button>
-            <button 
-              onClick={() => scrollToSection('faq')}
-              className="block w-full text-left text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium py-2"
-            >
-              FAQ
-            </button>
-            
-            <div className="pt-4 border-t border-gray-200">
-              {/* Mobile menu content - creator counter moved to header */}
-            </div>
+                <button 
+                  onClick={() => scrollToSection('faq')}
+                  className="block w-full text-left text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium py-2"
+                >
+                  FAQ
+                </button>
           </div>
         </motion.div>
       </div>

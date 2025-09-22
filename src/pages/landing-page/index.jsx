@@ -71,7 +71,7 @@ const LandingPage = () => {
       />
       {/* Problem Statement */}
       <div id="features" className="mt-0">
-        <ProblemStatement visitorType={visitorType} />
+          <ProblemStatement />
       </div>
       {/* Key Benefits */}
       <div className="mt-10">
