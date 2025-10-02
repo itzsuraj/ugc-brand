@@ -37,9 +37,9 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: 'Mail', text: 'hello@flooviomarketplace.com', href: 'mailto:hello@flooviomarketplace.com' },
-    { icon: 'Phone', text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: 'MapPin', text: 'San Francisco, CA', href: '#location' }
+    { icon: 'Mail', text: 'Hellofloovio@gmail.com', href: 'mailto:Hellofloovio@gmail.com' },
+    { icon: 'Phone', text: '+91 9167406976', href: 'tel:+919167406976' },
+    { icon: 'MapPin', text: 'Mumbai, India', href: '#location' }
   ];
 
   return (
