@@ -16,7 +16,7 @@ const CreatorHeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand }, ref) 
   }, []);
 
   const headline = "Get Paid On Time, Every Time";
-  const subheadline = "The UGC marketplace where creators always get paid on time—and brands always get content on time.";
+  const subheadline = "The Floovio marketplace where creators always get paid on time—and brands always get content on time.";
 
   return (
     <section ref={ref} className="relative min-h-auto md:min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden pt-20 md:pt-0 pb-10">

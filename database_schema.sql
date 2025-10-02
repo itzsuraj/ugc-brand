@@ -1,4 +1,4 @@
--- Database Schema for UGC Creator Brand Marketplace
+-- Database Schema for Floovio Creator Brand Marketplace
 -- Run this SQL in your Supabase SQL Editor
 
 -- Enable Row Level Security

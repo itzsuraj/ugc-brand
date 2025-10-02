@@ -8,7 +8,7 @@ import HeroSection from './components/HeroSection';
 import ProblemStatement from './components/ProblemStatement';
 import KeyBenefits from './components/KeyBenefits';
 import SolutionJourney from './components/SolutionJourney';
-import WhyChooseUGCBox from './components/WhyChooseUGCBox';
+import WhyChooseFloovio from './components/WhyChooseFloovio';
 import SocialProofCarousel from './components/SocialProofCarousel';
 import FeaturesGrid from './components/FeaturesGrid';
 import GamificationTeaser from './components/GamificationTeaser';
@@ -47,15 +47,15 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>UGCBox - Creator Marketplace | Get Paid On Time, Content Delivered Guaranteed</title>
-        <meta name="description" content="UGCBox is the only UGC marketplace that guarantees on-time content delivery for brands while ensuring fair, prompt payment for creators through automated escrow and reputation systems." />
-        <meta name="keywords" content="UGC, user generated content, creator marketplace, brand collaboration, content creation, influencer marketing, UGCBox" />
-        <meta property="og:title" content="UGCBox - Creator-Brand Platform" />
+        <title>Floovio - Creator Marketplace | Get Paid On Time, Content Delivered Guaranteed</title>
+        <meta name="description" content="Floovio is the only Floovio marketplace that guarantees on-time content delivery for brands while ensuring fair, prompt payment for creators through automated escrow and reputation systems." />
+        <meta name="keywords" content="Floovio, user generated content, creator marketplace, brand collaboration, content creation, influencer marketing, Floovio" />
+        <meta property="og:title" content="Floovio - Creator-Brand Platform" />
         <meta property="og:description" content="Join thousands of creators and brands building successful partnerships with guaranteed payments and on-time delivery." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="UGCBox - Get Paid On Time" />
-        <meta name="twitter:description" content="The only UGC marketplace with payment protection and delivery guarantees." />
+        <meta name="twitter:title" content="Floovio - Get Paid On Time" />
+        <meta name="twitter:description" content="The only Floovio marketplace with payment protection and delivery guarantees." />
       </Helmet>
       
       {/* Header */}
@@ -81,9 +81,9 @@ const LandingPage = () => {
       <div id="how-it-works" className="mt-10">
         <SolutionJourney visitorType={visitorType} />
       </div>
-      {/* Why Choose UGCBox */}
+      {/* Why Choose Floovio */}
       <div className="mt-10">
-        <WhyChooseUGCBox visitorType={visitorType} />
+        <WhyChooseFloovio visitorType={visitorType} />
       </div>
       {/* Social Proof*/}
       <div id="testimonials" className="mt-10">

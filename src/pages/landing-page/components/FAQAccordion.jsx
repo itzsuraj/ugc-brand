@@ -8,8 +8,8 @@ const FAQAccordion = () => {
   const faqs = [
     {
       category: 'General',
-      question: 'How does the UGC marketplace work?',
-      answer: `Our platform connects brands with verified UGC creators through a streamlined process:\n\n1. Creators build profiles showcasing their work and set their rates\n2. Brands browse creators using smart filters and send project briefs\n3. Creators accept projects and deliver content within agreed timelines\n4. Our escrow system ensures secure payment upon content approval\n\nWe handle all the logistics, from initial matching to final payment, making collaboration seamless for both parties.`,
+      question: 'How does the Floovio marketplace work?',
+      answer: `Our platform connects brands with verified Floovio creators through a streamlined process:\n\n1. Creators build profiles showcasing their work and set their rates\n2. Brands browse creators using smart filters and send project briefs\n3. Creators accept projects and deliver content within agreed timelines\n4. Our escrow system ensures secure payment upon content approval\n\nWe handle all the logistics, from initial matching to final payment, making collaboration seamless for both parties.`,
       icon: 'HelpCircle'
     },
     {
@@ -81,7 +81,7 @@ const FAQAccordion = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Everything you need to know about our UGC marketplace platform
+            Everything you need to know about our Floovio marketplace platform
           </motion.p>
         </div>
 

@@ -29,7 +29,7 @@
    - Set up and deploy? **Y**
    - Which scope? **Your account**
    - Link to existing project? **N**
-   - Project name: **ugc-creator-brand-marketplace** (or your preferred name)
+   - Project name: **floovio-creator-brand-marketplace** (or your preferred name)
    - Directory: **./build** (or just press Enter)
    - Override settings? **N**
 
@@ -55,7 +55,7 @@
 
 ## 📁 Project Structure
 ```
-ugc-creator-brand-marketplace/
+floovio-creator-brand-marketplace/
 ├── build/                 # Production build
 ├── src/                   # Source code
 ├── vercel.json           # Vercel configuration
@@ -91,4 +91,4 @@ ugc-creator-brand-marketplace/
 - **First Load**: Optimized with Vite
 - **Caching**: Automatic with Vercel CDN
 
-Your UGC Creator Brand Marketplace is ready for production! 🎉
+Your Floovio Creator Brand Marketplace is ready for production! 🎉

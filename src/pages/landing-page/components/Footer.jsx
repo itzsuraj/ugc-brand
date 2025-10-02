@@ -37,7 +37,7 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: 'Mail', text: 'hello@ugcmarketplace.com', href: 'mailto:hello@ugcmarketplace.com' },
+    { icon: 'Mail', text: 'hello@flooviomarketplace.com', href: 'mailto:hello@flooviomarketplace.com' },
     { icon: 'Phone', text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
     { icon: 'MapPin', text: 'San Francisco, CA', href: '#location' }
   ];
@@ -61,13 +61,13 @@ const Footer = () => {
                   <Icon name="Zap" size={24} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">UGC Marketplace</h3>
+                  <h3 className="text-xl font-bold">Floovio Marketplace</h3>
                   <p className="text-sm text-gray-400">Creator-Brand Platform</p>
                 </div>
               </div>
 
               <p className="text-gray-300 mb-6 leading-relaxed">
-                The only UGC marketplace that guarantees on-time content delivery for brands while ensuring fair, prompt payment for creators through automated escrow and reputation systems.
+                The only Floovio marketplace that guarantees on-time content delivery for brands while ensuring fair, prompt payment for creators through automated escrow and reputation systems.
               </p>
 
               {/* Contact Info */}
@@ -242,7 +242,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span>© {currentYear} UGC Marketplace. All rights reserved.</span>
+              <span>© {currentYear} Floovio Marketplace. All rights reserved.</span>
               <div className="hidden md:flex items-center space-x-4">
                 <div className="flex items-center space-x-1">
                   <Icon name="Shield" size={14} className="text-green-400" />

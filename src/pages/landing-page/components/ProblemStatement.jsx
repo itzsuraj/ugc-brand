@@ -73,7 +73,7 @@ const ProblemStatement = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Both creators and brands are frustrated with the current state of UGC collaboration
+            Both creators and brands are frustrated with the current state of Floovio collaboration
           </motion.p>
         </div>
 

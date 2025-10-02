@@ -138,7 +138,7 @@ const KeyBenefits = ({ visitorType = 'creator' }) => {
             <p className="text-gray-600 mb-6">
               {visitorType === 'creator' 
                 ? 'Join thousands of creators who are already building successful brand partnerships'
-                : 'Join hundreds of brands who trust UGCBox for their content needs'
+                : 'Join hundreds of brands who trust Floovio for their content needs'
               }
             </p>
             <div className="flex items-center justify-center space-x-2 text-purple-600">

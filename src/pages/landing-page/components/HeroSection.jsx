@@ -18,8 +18,8 @@ const HeroSection = forwardRef(({ onJoinAsCreator, onJoinAsBrand, visitorType, o
   const creatorHeadline = "Get Paid to Create. Build Your Dream Brand Collabs.";
   const brandHeadline = "Find the Creators Who Make Your Brand Unstoppable";
   
-  const creatorSubtext = "Turn your creativity into income. UGCBox helps you land paid gigs, build your portfolio, and work with brands that align with your style.";
-  const brandSubtext = "From authentic TikToks to scroll-stopping Reels – UGCBox connects you with vetted creators who know how to drive sales, not just likes.";
+  const creatorSubtext = "Turn your creativity into income. Floovio helps you land paid gigs, build your portfolio, and work with brands that align with your style.";
+  const brandSubtext = "From authentic TikToks to scroll-stopping Reels – Floovio connects you with vetted creators who know how to drive sales, not just likes.";
 
   return (
     <section ref={ref} className="relative min-h-auto md:min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden pt-10 md:pt-0 pb-1">
