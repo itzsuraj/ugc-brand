@@ -124,7 +124,7 @@ const FeaturesGrid = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA - commented out
         <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}
@@ -145,6 +145,7 @@ const FeaturesGrid = () => {
             </div>
           </div>
         </motion.div>
+        */}
       </div>
     </section>
   );
