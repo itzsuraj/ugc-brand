@@ -120,7 +120,7 @@ const KeyBenefits = ({ visitorType = 'creator' }) => {
           ))}
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section (commented out)
         <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}
@@ -152,6 +152,7 @@ const KeyBenefits = ({ visitorType = 'creator' }) => {
             </div>
           </div>
         </motion.div>
+        */}
       </div>
     </section>
   );
